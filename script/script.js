@@ -33,15 +33,13 @@ const images = [
     }
 ];
 
-
-
 for (let i = 0; i < images.length; i++ ) {
     let games = images[i]; 
     imgContainer.innerHTML += `
     <img class="${i == 0 ? 'active' : ''}" src="assets/${games.image}">
     <div class="description">
-        <h2 class="active">${games.title}</h2>
-        <p>${games.text}</p>
+        <h2 class="${i == 0 ? 'active' : ''}">${games.title}</h2>
+        <p class="${i == 0 ? 'active' : ''}">${games.text}</p>
     </div>
     `
 };
@@ -49,11 +47,15 @@ for (let i = 0; i < images.length; i++ ) {
 const btnPrev = document.querySelector('.btn-up');
 const btnNext = document.querySelector('.btn-down');
 const listHightlighted = document.querySelectorAll('.highlighted img');
+const titleHighlighted = document.querySelectorAll('.description h2');
+const textHighlighted = document.querySelectorAll('.description p');
 
 let activeIndex = 0;
 
 btnNext.addEventListener('click', function() {
     listHightlighted[activeIndex].classList.remove('active');
+    titleHighlighted[activeIndex].classList.remove('active');
+    textHighlighted[activeIndex].classList.remove('active');
 
     activeIndex++
 
@@ -62,10 +64,14 @@ btnNext.addEventListener('click', function() {
     }
 
     listHightlighted[activeIndex].classList.add('active');
+    titleHighlighted[activeIndex].classList.add('active');
+    textHighlighted[activeIndex].classList.add('active');
 });
 
 btnPrev.addEventListener('click', function() {
     listHightlighted[activeIndex].classList.remove('active');
+    titleHighlighted[activeIndex].classList.remove('active');
+    textHighlighted[activeIndex].classList.remove('active');
 
     activeIndex--
 
@@ -74,4 +80,6 @@ btnPrev.addEventListener('click', function() {
     }
 
     listHightlighted[activeIndex].classList.add('active');
+    titleHighlighted[activeIndex].classList.add('active');
+    textHighlighted[activeIndex].classList.add('active');
 })
