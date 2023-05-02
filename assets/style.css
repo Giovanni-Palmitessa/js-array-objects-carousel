@@ -37,3 +37,19 @@ body{
 .carousel .active{
     display: block;
 }
+
+.btn{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.carousel .controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
