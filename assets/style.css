@@ -56,4 +56,24 @@ body{
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 5;
+}
+
+.description{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+
+.description h2{
+    display: none;
+}
+
+.description p{
+    display: none;
+}
+
+.description .active {
+    display: block;
 }
