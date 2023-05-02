@@ -65,5 +65,5 @@ btnPrev.addEventListener('click', function() {
 
 for (let i = 0; i < images.length; i++ ) {
     let games = images[i]; 
-    containerHighlighted.innerHTML += `<img src="assets/${games.image}`
+    containerHighlighted.innerHTML += `<img class="${i == 0 ? 'active' : ''}" src="assets/${games.image}">`
 };
