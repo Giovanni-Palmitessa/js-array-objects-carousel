@@ -1,5 +1,6 @@
 const containerHighlighted = document.querySelector('.highlighted');
 const imgContainer = document.querySelector('.img-container');
+const listThumbs = document.querySelectorAll('.thumbs img');
 
 const images = [
     {

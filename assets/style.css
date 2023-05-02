@@ -52,7 +52,7 @@ body{
 
 .thumbs .active{
     filter: brightness(1);
-    border: 2px solid gray;
+    border: 5px solid gray;
 }
 
 .img-container img{
