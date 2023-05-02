@@ -1,11 +1,11 @@
 const containerHighlighted = document.querySelector('.highlighted');
 const imgContainer = document.querySelector('.img-container');
-const listThumbs = document.querySelectorAll('.thumbs img');
+const listThumbs = document.querySelectorAll('.container-thumbs img');
 
 const images = [
     {
         image: 'img/01.webp',
-        title: 'Marvel\'s Spiderman Miles Morale',
+        title: 'Marvel\'s Spiderman Miles Morales',
         text: 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
     }, 
     
@@ -51,12 +51,15 @@ const listHightlighted = document.querySelectorAll('.highlighted img');
 const titleHighlighted = document.querySelectorAll('.description h2');
 const textHighlighted = document.querySelectorAll('.description p');
 
+
 let activeIndex = 0;
 
 btnNext.addEventListener('click', function() {
     listHightlighted[activeIndex].classList.remove('active');
     titleHighlighted[activeIndex].classList.remove('active');
     textHighlighted[activeIndex].classList.remove('active');
+    listThumbs[activeIndex].classList.remove('active');
+
 
     activeIndex++
 
@@ -67,12 +70,14 @@ btnNext.addEventListener('click', function() {
     listHightlighted[activeIndex].classList.add('active');
     titleHighlighted[activeIndex].classList.add('active');
     textHighlighted[activeIndex].classList.add('active');
+    listThumbs[activeIndex].classList.add('active');
 });
 
 btnPrev.addEventListener('click', function() {
     listHightlighted[activeIndex].classList.remove('active');
     titleHighlighted[activeIndex].classList.remove('active');
     textHighlighted[activeIndex].classList.remove('active');
+    listThumbs[activeIndex].classList.remove('active');
 
     activeIndex--
 
@@ -83,4 +88,5 @@ btnPrev.addEventListener('click', function() {
     listHightlighted[activeIndex].classList.add('active');
     titleHighlighted[activeIndex].classList.add('active');
     textHighlighted[activeIndex].classList.add('active');
+    listThumbs[activeIndex].classList.add('active');
 })
