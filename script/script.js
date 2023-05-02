@@ -1,5 +1,4 @@
-const btnPrev = document.querySelector('.btn-up');
-const btnNext = document.querySelector('.btn-down');
+
 
 const containerHighlighted = document.querySelector('.highlighted');
 
@@ -42,6 +41,8 @@ for (let i = 0; i < images.length; i++ ) {
     containerHighlighted.innerHTML += `<img class="${i == 0 ? 'active' : ''}" src="assets/${games.image}">`
 };
 
+const btnPrev = document.querySelector('.btn-up');
+const btnNext = document.querySelector('.btn-down');
 const listHightlighted = document.querySelectorAll('.highlighted img');
 
 let activeIndex = 0;
