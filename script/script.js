@@ -1,6 +1,5 @@
-
-
 const containerHighlighted = document.querySelector('.highlighted');
+const imgContainer = document.querySelector('.img-container');
 
 const images = [
     {
@@ -38,7 +37,10 @@ const images = [
 
 for (let i = 0; i < images.length; i++ ) {
     let games = images[i]; 
-    containerHighlighted.innerHTML += `<img class="${i == 0 ? 'active' : ''}" src="assets/${games.image}">`
+    imgContainer.innerHTML += `
+    <img class="${i == 0 ? 'active' : ''}" src="assets/${games.image}">
+    
+    `
 };
 
 const btnPrev = document.querySelector('.btn-up');
