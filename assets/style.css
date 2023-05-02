@@ -15,6 +15,7 @@ body{
 }
 
 .carousel{
+    display: flex;
     width: 800px;
     height: 90vh;
     position: absolute;
@@ -25,13 +26,36 @@ body{
 
 .highlighted{
     height: 100%;
+    width: 80%;
 }
 
 .img-container{
     height: 100%;
 }
 
-.carousel img{
+.thumbs{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    background-color: salmon;
+}
+
+.thumbs img{
+    display: block;
+    width: 100%;
+    height: 0;
+    object-fit: cover;
+    filter: brightness(.5);
+    flex: 1 0 0;
+}
+
+.thumbs .active{
+    filter: brightness(1);
+    border: 2px solid gray;
+}
+
+.img-container img{
     display: none;
     width: 100%;
     height: 100%;
@@ -39,7 +63,7 @@ body{
     position: relative;
 }
 
-.carousel .active{
+.img-container .active{
     display: block;
 }
 
