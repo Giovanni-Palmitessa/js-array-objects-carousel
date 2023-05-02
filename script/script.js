@@ -39,7 +39,10 @@ for (let i = 0; i < images.length; i++ ) {
     let games = images[i]; 
     imgContainer.innerHTML += `
     <img class="${i == 0 ? 'active' : ''}" src="assets/${games.image}">
-    
+    <div class="description">
+        <h2 class="active">${games.title}</h2>
+        <p>${games.text}</p>
+    </div>
     `
 };
 
